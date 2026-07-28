@@ -22,7 +22,7 @@
 //Redeclaration of variables is not allowed in typescript, but it is allowed in javascript.
 
 //NodeJS
-//NodeJS is a runtime environment that allows developers to run JavaScript code outside of a web browser. 
+//NodeJS is a runtime environment that allows developers to run JavaScript/TypeScript code outside of a web browser. 
 // It is built on the V8 JavaScript engine, which is the same engine that powers Google Chrome. 
 // NodeJS enables developers to build server-side applications using JavaScript, making it possible to use 
 // a single programming language for both client-side and server-side development.
