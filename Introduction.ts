@@ -27,6 +27,7 @@
 // NodeJS enables developers to build server-side applications using JavaScript, making it possible to use 
 // a single programming language for both client-side and server-side development.
 //NodeJS provides an event-driven, non-blocking I/O model that makes it lightweight and efficient,
+//NodeJS is like JRE for Java
 
 
 
