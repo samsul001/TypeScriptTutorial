@@ -20,6 +20,10 @@
 //Typescript makes large-scale applications easier to maintain and scale, as it provides developers with a more robust and 
 // structured way to write code.
 //Redeclaration of variables is not allowed in typescript, but it is allowed in javascript.
+//Typescript compiler => npm install -g typescript
+//Typescript executor => npm install -g tsx (can execute typescript directly without compiling the code to javascript)
+//Run the below command to fix execution policies error
+// set-ExecutionPolicy -scope -CurrentUser -ExecutionPolicy RemoteSigned
 
 //NodeJS
 //NodeJS is a runtime environment that allows developers to run JavaScript code outside of a web browser. 
