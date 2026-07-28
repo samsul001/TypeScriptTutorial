@@ -1,6 +1,13 @@
+//Variable is a container which can hold/store data values. In TypeScript, variables can be declared using var, let, or const keywords.
+//Specifying the data type of a variable is optional in TypeScript & Typescript. If you don't specify a data type, TypeScript will 
+// infer the type based on the assigned value.
+//Keywords used to declare variables in TypeScript: var, let, const
+x=10;
+console.log(x); // Output: 10
+
+
+
 //Difference between var vs let vs const in TypeScript
-//In TypeScript, as in JavaScript, there are three ways to declare variables: var, let, and const. 
-// Each has its own characteristics and use cases:
 
 //1. var: The var keyword is function-scoped, meaning that a variable declared with var is accessible throughout the entire function 
 // in which it is declared. It can be re-declared and updated within its scope. However, using var can lead to issues like 
