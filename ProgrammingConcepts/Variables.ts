@@ -34,9 +34,18 @@
 //var allows re-declaration of variables, while let and const do not allow re-declaration of variables in the same scope.
 
 //4. Re-Initialization:
-//5. Hoisting: Hoisting is a behavior in JavaScript and TypeScript where variable and function declarations are moved 
-// to the top of their containing scope during compilation.
+//---------------------
+//Re-initialization is nothing but assigning a new value to an already declared variable.
+//var & let allow re-initialization of variables, while const does not allow re-initialization of variables.
 
+//5. Hoisting: 
+//---------
+//Hoisting is a behavior in JavaScript and TypeScript where variable and function declarations are moved
+// to the top of their containing scope during compilation.
+//var declarations are hoisted to the top of their function scope, while let and const declarations are hoisted.
+//  to the top of their block scope.
+//var variables are initialized with undefined during hoisting, while let and const variables are not initialized until 
+// their actual declaration is reached in the code.
 
 //In summary, the main differences between var, let, and const in TypeScript are their scoping rules and whether 
 // they can be reassigned or re-declared. In modern TypeScript development, it is generally recommended to use let and const for variable 
