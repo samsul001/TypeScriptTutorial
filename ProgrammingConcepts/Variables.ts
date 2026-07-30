@@ -43,20 +43,20 @@
 //hoisting : is a behavior in javascript and typescript which processing the variables and function before it's declaration.
 
 //var declaration is hoisted with undefined value. 
-
-//let and const declarations are hoisted with un initialized (not undefined, hence reference error will be thrown). Let and const variables cannot be accessed before declaration , it is called TDZ(Temporal Deadzone)
-
+//let and const declarations are hoisted with un initialized (not undefined, hence reference error will be thrown). 
+// Let and const variables cannot be accessed before declaration , it is called TDZ(Temporal Deadzone)
 //Function declaration is fully hoisted. Can access function before it's declaration and it works fine
-
-//Function expression with var - throwing TypeError because we are trying to call a function by assigning undefined as value, hence Type Error will be thrown
-
-//Function expression with let & const - throwing Reference error because we are trying to call a function which is assigned to a variable which is throwing Un Initialized error. let and const variables cannot be accessed before declaration, it is called Temporal Deadzone.
-
+//Function expression with var - throwing TypeError because we are trying to call a function by assigning undefined as value, 
+// hence Type Error will be thrown
+//Function expression with let & const - throwing Reference error because we are trying to call a function which is assigned to 
+// a variable which is throwing Un Initialized error. let and const variables cannot be accessed before declaration, 
+// it is called Temporal Deadzone.
 //Arrow function is also same as above
 
 //Why Function declarations are different ?
 //Function declaration is not assigning to a variable.
-//Function declaration will be saved in the memory creation phase by javascript engine, hence the function is ready before execution begins
+//Function declaration will be saved in the memory creation phase by javascript engine, hence the function is ready before execution 
+// begins
 
 
 var x = 10; // function-scoped variable
