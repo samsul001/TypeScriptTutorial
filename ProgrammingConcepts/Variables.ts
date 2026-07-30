@@ -40,16 +40,24 @@
 
 //5. Hoisting: 
 //---------
-//Hoisting is a behavior in JavaScript and TypeScript where variable and function declarations are moved
-// to the top of their containing scope during compilation.
-//var declarations are hoisted to the top of their function scope, while let and const declarations are hoisted.
-//  to the top of their block scope.
-//var variables are initialized with undefined during hoisting, while let and const variables are not initialized until 
-// their actual declaration is reached in the code.
+//hoisting : is a behavior in javascript and typescript which processing the variables and function before it's declaration.
 
-//In summary, the main differences between var, let, and const in TypeScript are their scoping rules and whether 
-// they can be reassigned or re-declared. In modern TypeScript development, it is generally recommended to use let and const for variable 
-// declarations, with const being preferred for values that should not change.
+//var declaration is hoisted with undefined value. 
+
+//let and const declarations are hoisted with un initialized (not undefined, hence reference error will be thrown). Let and const variables cannot be accessed before declaration , it is called TDZ(Temporal Deadzone)
+
+//Function declaration is fully hoisted. Can access function before it's declaration and it works fine
+
+//Function expression with var - throwing TypeError because we are trying to call a function by assigning undefined as value, hence Type Error will be thrown
+
+//Function expression with let & const - throwing Reference error because we are trying to call a function which is assigned to a variable which is throwing Un Initialized error. let and const variables cannot be accessed before declaration, it is called Temporal Deadzone.
+
+//Arrow function is also same as above
+
+//Why Function declarations are different ?
+//Function declaration is not assigning to a variable.
+//Function declaration will be saved in the memory creation phase by javascript engine, hence the function is ready before execution begins
+
 
 var x = 10; // function-scoped variable
 x = 23; // re-declaration is allowed
