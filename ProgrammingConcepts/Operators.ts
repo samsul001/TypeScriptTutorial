@@ -74,3 +74,20 @@ console.log(num1 === num2) //false (compares the values and its data type)
 // true    false    false   true        false
 // false   true     false   true        false
 // false   false    false   false       true
+
+
+//Combination of relational and logical operator
+let num1 = 4, num2=7, num3=9;
+console.log(num1 < num2 && num2 < num3)
+
+//Increment and Decrement operators
+
+//It used for incrementing and decrementing the number variables
+//post Increment : while assigning a post incremental variable to another variable, incremented value will not be stored to the new variable. But the concerned incremented variable will show the incremented value.
+//pre Increment: while assigning a pre incremental variable to another variable, incremented value will be assigned to new variable also.
+//Post Decrement & Pre Decrement - Concept is same as above.
+
+//Ternary operators
+let s1:number = 45, s2:number = 56;
+let bigValue = s1 > s2 ? s1:s2;
+console.log(bigValue)
