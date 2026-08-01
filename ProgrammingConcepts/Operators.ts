@@ -74,3 +74,14 @@ console.log(num1 === num2) //false (compares the values and its data type)
 // true    false    false   true        false
 // false   true     false   true        false
 // false   false    false   false       true
+
+console.log("Logical Operators")
+console.log(true && true || false);
+console.log(true && false || true);
+console.log(false && true);
+console.log(false && false);
+console.log("--------------")
+console.log(!true);
+console.log(!false);
+console.log("--------------")
+console.log(!true && false || false);
