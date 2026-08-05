@@ -97,8 +97,6 @@ do{
     num8++;
 }while(num8 < 4);
 
-let odd: number = 1;
-
 console.log("--------------Odd numbers from 1 to 10 using do-while loop-------------------")
 let num:number = 0;
 
@@ -119,5 +117,10 @@ do{
     }
     num1++;
 }while(num1 <= 15);
+
+
+//For Loop
+//----------------
+
 
 export {};
