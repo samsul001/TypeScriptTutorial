@@ -1,9 +1,15 @@
-let num1:number = 0;
+function sumOfElements(...elemnts: (string | number)):number {
+    let sum = 0;
+    let str = '';
+    for(let i=0; i<elemnts.length; i++){
+        const element = elements[i];
 
-do{
-    if(num%2 != 0){
-        console.log(num);
+        if(typeof element == "number"){
+            sum += element;
+        }else{
+            str = str +" "+element;
+        }
     }
-    num++;
-}while(num <= 15)
+    console.log(str);
+    retrun sum;
 }
