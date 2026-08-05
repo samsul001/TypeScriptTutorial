@@ -2,6 +2,15 @@
 //----------------
 //Looping in programming is nothing but executing a block of code repeatedly based on a condition.
 //In TypeScript, we can use for, while, and do-while loops to create looping logic.
+//while loop & do-while loop requires initialization, condition & increment/decrement in different steps 
+//for loop requires all above condition in one single line
+//if we dont know the number of iteration, we can go ahead with while/do-while loop. If we know the number of iteration, we can use for loop.
+
+//break
+//if we want to intentionally exit from the loop, we can use break
+
+//continue
+//If we want to skip and jump to the next iteration from the loop, we can use continue. In this, loop will not be exited once condition is met, it will simply skip and jump to next iteration
 
 //While Loop
 //----------------
