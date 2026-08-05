@@ -88,13 +88,19 @@ console.log(!true && false || false);
 
 
 //Combination of relational and logical operator
-let num1 = 4, num2=7, num3=9;
-console.log(num1 < num2 && num2 < num3)
+let n1= 4, n2=7, n3=9;
+console.log(n1 < n2 && n2 < n3)
 
 //Increment and Decrement operators
-
+//-------------------------------------
 //It used for incrementing and decrementing the number variables
-//post Increment : while assigning a post incremental variable to another variable, incremented value will not be stored to the new variable. But the concerned incremented variable will show the incremented value.
+//post Increment : while assigning a post incremental variable to another variable, incremented value will not be stored to the 
+// new variable. But the concerned incremented variable will show the incremented value.
+let sam = 10;
+let sam1 = sam++;
+let sam2 = ++sam;
+console.log(`incremented:${sam} , post-incremented: ${sam1}`); //10, 10
+console.log(`incremented:${sam} , pre-incremented: ${sam2}`); //12, 12
 //pre Increment: while assigning a pre incremental variable to another variable, incremented value will be assigned to new variable also.
 //Post Decrement & Pre Decrement - Concept is same as above.
 
@@ -102,3 +108,5 @@ console.log(num1 < num2 && num2 < num3)
 let s1:number = 45, s2:number = 56;
 let bigValue = s1 > s2 ? s1:s2;
 console.log(bigValue)
+
+export {};

@@ -1,0 +1,9 @@
+let num1:number = 0;
+
+do{
+    if(num%2 != 0){
+        console.log(num);
+    }
+    num++;
+}while(num <= 15)
+}

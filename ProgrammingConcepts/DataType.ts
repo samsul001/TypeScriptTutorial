@@ -140,3 +140,5 @@ function sum(a: number, b: number): void {
 }
 
 sum(5, 10); // Output: 15
+
+export{}
