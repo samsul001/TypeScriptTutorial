@@ -1,15 +1,1 @@
-function sumOfElements(...elemnts: (string | number)):number {
-    let sum = 0;
-    let str = '';
-    for(let i=0; i<elemnts.length; i++){
-        const element = elements[i];
-
-        if(typeof element == "number"){
-            sum += element;
-        }else{
-            str = str +" "+element;
-        }
-    }
-    console.log(str);
-    retrun sum;
-}
+let hdjssa = (...nums: (string| number)[]):number => nums.length;
