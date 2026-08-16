@@ -89,4 +89,5 @@ function captitalizeArray(arrayDef:string[]):string[]{
 let newArray:string[] = captitalizeArray(colors)
 console.log(captitalizeArray(newArray)) //returned new array
 
+
 export{}
