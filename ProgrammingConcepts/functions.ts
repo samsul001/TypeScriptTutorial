@@ -210,8 +210,150 @@ const lengthOfElements = hdjssa(1, 2, 3, "Hello", 4, 5, "World", 6, 7, 8, "TypeS
 console.log(`Arrow function with multiple types and rest parameters is ${lengthOfElements}`);
 
 
-//===========================================================================================================================
+//==========================================================================================================================
 
-
-//Function Declaration: A function that is declared using the function keyword.
+//Function Declaration: A function that is declared using the function keyword. 
 //Function Expression: A function that is assigned to a variable.
+
+//=========================================================================================================================
+
+//Callback Function: A function that is passed as an argument to another function.
+//----------------------------------------------------------
+//callback function is a function that is passed as an argument to another function that gets executed later. 
+//Useful when want to execute a function only after another function completes.
+//Common in asynchromous operations like API calls, event handling, and timers, we can make them as synchronous by using callback functions.
+//Typescript follows the asynchronous programming model, so Callback functions are used to make the code synchronous.
+
+//Example 1: Callback function with no parameters and no return value
+function showmessage(){
+    console.log(`This is call back function`);
+}
+
+//call the function and pass the callback function as an argument - smg is the callback function
+function greet(name:string, smg:() => void){
+    console.log(name);
+    smg();
+}
+
+greet('Samsul',() => {
+    console.log(`This is call back function`);
+});
+
+//Example 2: Callback function with parameters and no return value
+function add1(x:number, y:number, callback:(result:number) => void){
+    let sum = x+y;
+    callback(sum);
+}
+
+add1(5, 3, (result) => {
+    console.log(`The sum is ${result}`);
+});
+
+//Example 3: Callback function with parameters and return value
+function sumOfAccountBalance(acc1:number, acc2:number, acc3:number):number{
+    return acc1+acc2+acc3;
+}
+
+function sumOfBalance(x:number, y:number, z:number, processSum:(ac1:number, ac2:number, ac3:number)=>number){
+    console.log('gdkdkjdf');
+    return processSum(x,y,z)
+}
+
+console.log(sumOfBalance(67,43,15,sumOfAccountBalance));
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//Example 3.a: Callback function with parameters amd return
+
+function showTotalCharges(charges:number): number{
+    return charges; 
+}
+
+function sumOfCharges(x:number, y:number, z:number, totalCharge:(value:number)=> number):number{
+    let sumVal = x+y+z;
+    return totalCharge(sumVal);
+}
+
+let showTotalSumOfCharges = sumOfCharges(26.25,52.5,105,showTotalCharges)
+console.log(showTotalSumOfCharges)
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+//Function Overloading
+//Function overloading allows to define multiple versions of a function with same name but differnt parameters or return types.
+//The following steps are required to follow to implement Function overloading
+
+//Step1: Define differnt signatures with different parameters
+//Step2: Implement the function
+//step3: Calling the function
+
+//Step1:
+//Function signature: Defining function without body is known as Signature
+
+//Example1: Same Function signatures with Different Parameter types
+function getInfo(id:number):string;
+function getInfo(name:string):string;
+
+function getInfo(param: number | string):string{
+    if(typeof param === 'number'){
+        return(`The user ID is ${param}`);
+    }else{
+        return(`The user name is ${param}`);
+    }
+}
+
+//Example2: Same function signatures with Different number of parameters
+function addNumbers(n1:number, n2:number, n3:number):number;
+function addNumbers(n1:number, n2:number):number;
+
+function addNumbers(x:number, y:number, a?:number):number{
+    if(a !== undefined){
+        return x+y+a;
+    }
+    return x+y;
+}
+
+console.log(addNumbers(4,5))
+console.log(addNumbers(1,4,5));
+
+//Example3: Same function signature with different return types
+function processInput(str:string):string;
+function processInput(num:number):number;
+
+function processInput(param: string | number) : string | number | undefined {
+    if(typeof param === 'string'){
+        return(`returned ID is ${param}`)
+    }
+    else if(typeof param === 'number'){
+        return param;
+    }
+    return undefined;
+}
+
+console.log(processInput(6));
+console.log(processInput('Samsul'))
+
+//Example4: Same function signature with different parameter and one return types
+function overLoadFn(num:number):string;
+function overLoadFn(str:string):string;
+function overLoadFn(boo: boolean): string;
+
+function overLoadFn(param: number|string|boolean): string{
+    if(typeof param === "number"){
+        return(`the number is ${param}`)
+    }
+    else if(typeof param === "string"){
+        return(`The Name is ${param}`)
+    }
+    else{
+        let res:string = param ? "Married":"Single";
+        return res;
+    }
+}
+
+console.log(overLoadFn(45));
+console.log(overLoadFn("Samsul"));
+console.log(overLoadFn(false)) //Single
+console.log(overLoadFn(true)) //married
+
+export{}

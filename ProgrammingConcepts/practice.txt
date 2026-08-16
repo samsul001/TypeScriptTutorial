@@ -1,1 +1,0 @@
-let hdjssa = (...nums: (string| number)[]):number => nums.length;
